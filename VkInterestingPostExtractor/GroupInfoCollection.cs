@@ -19,7 +19,7 @@ namespace VkInterestingPostExtractor
             return GetGroupInfoCollection().Select(gi => gi.GroupId).ToReadOnlyCollection();
         }
 
-        private IReadOnlyCollection<GroupInfo> GetGroupInfoCollection()
+        public IReadOnlyCollection<GroupInfo> GetGroupInfoCollection()
         {
             return _groupInfoCollection ?? (_groupInfoCollection = _resolver.Resolve());
         }
