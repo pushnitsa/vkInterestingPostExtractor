@@ -36,6 +36,7 @@ namespace VkInterestingPostExtractor
                 .AddTransient<WallPostFetcher>()
                 .AddTransient(s => new DateTimeOffsetFetcher(7))
                 .AddTransient<GroupInfoResolver>()
+                .AddTransient<PostHandler>()
                 .AddTransmitters(_configuration)
                 .AddCalculator()
                 .BuildServiceProvider();
